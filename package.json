@@ -1,0 +1,23 @@
+{
+  "name": "note-taking-challenge",
+  "version": "1.0.0",
+  "description": "HTML, CSS, Javascript, Node, and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt658041/Note-Taking-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matt658041/Note-Taking-Challenge/issues"
+  },
+  "homepage": "https://github.com/Matt658041/Note-Taking-Challenge#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
