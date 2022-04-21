@@ -1,20 +1,26 @@
-const path = require('path');
-const router = require('express').Router();
+const router = require('express').Router()
+const res = require('express/lib/response')
+const {indexApiRoutes, filterByQuery} = require('../apiRoutes/index')
+const {indexHtmlRoutes} = require('../htmlRoutes/index')
 
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/index.html'));
+//Adding the functions to get the notes in html then post the notes 
+router.get('/public/notes.html', (req, res) => {
+    getNotes() 
+    .then(notes => {res.json(notes)})
+    .catch(err => {
+        res.status(`Service Error `)
+    })
 });
+router.post ('/public/notes.html,', (req,res) => {
+    console.log(req.body)
+    .addNote(req.body)
+    .then(note => {
+        res.json(note)
+    })
+    .catch(err => {
+        res.status(`Service Error`)
+    })
+})
 
-router.get('/animals', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/animals.html'));
-});
-
-router.get('/zookeepers', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/zookeepers.html'));
-});
-
-router.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/index.html'));
-});
 
 module.exports = router;
