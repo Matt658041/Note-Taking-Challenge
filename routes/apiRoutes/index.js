@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const dbStore = require ('/public/data/store.js')
+const dbStore = require ('../../public/data/store')
 
 
 //Adding the functions to get the notes in html then post the notes 
