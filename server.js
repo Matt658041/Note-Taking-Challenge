@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+//Use port to give access to db file
 const PORT = process.env.PORT || 3001;
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
